@@ -6,7 +6,7 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
-/{
+/ {
   chosen {
     zmk,kscan = &kscan0;
     zmk,matrix-transform = &default_transform;
@@ -24,10 +24,10 @@
     >;
   };
 
-  kscan0: kscan_0 {
+  kscan_0: kscan_0 {
     compatible = "zmk,kscan-gpio-direct";
-    input-gpios;
-
+    wekeup-source;
+    
     input-gpios
       = <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
       , <&xiao_d 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
